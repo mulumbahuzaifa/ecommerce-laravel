@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css"  href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" type="text/css"  href="{{ asset('assets/css/color-01.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/6-beta4/css/tempus-dominus.min.css" integrity="sha512-MAE2fieZOXaN7hawt+GziEfza/z8IyG2Xbt2Aw68NrTPzHBzOF66A0/Vr5PU+MgFs1H4/uWH6AbANhuxZT03Hw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.css" integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     @livewireStyles
@@ -117,6 +117,12 @@
                                                     <a title="Sale Setting" href="{{ route('admin.sale') }}">Sale Setting</a>
                                                 </li>
                                                 <li class="menu-item">
+                                                    <a title="Coupon Setting" href="{{ route('admin.coupons') }}">Coupon Setting</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a title="Orders" href="{{ route('admin.orders') }}">Orders</a>
+                                                </li>
+                                                <li class="menu-item">
                                                     <a title="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                                 </li>
                                                 <form id="logout-form" method="POST" action="{{ route('logout') }}">
@@ -132,6 +138,9 @@
                                             <ul class="submenu curency">
                                                 <li class="menu-item">
                                                     <a title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a title="My Orders" href="{{ route('user.orders') }}">My Orders</a>
                                                 </li>
                                                 <li class="menu-item">
                                                     <a title="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -539,7 +548,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/6-beta4/js/tempus-dominus.min.js" integrity="sha512-OaImY8vZKab5dabyJF4sR+jb78aCQm2sbN+sEseO4D6NHp7jM91rgn+z4KDRol9RE4NCRybfiCBsxfImPtv+ow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js" integrity="sha512-T5Bneq9hePRO8JR0S/0lQ7gdW+ceLThvC80UjwkMRz+8q+4DARVZ4dqKoyENC7FcYresjfJ6ubaOgIE35irf4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     @livewireScripts
 

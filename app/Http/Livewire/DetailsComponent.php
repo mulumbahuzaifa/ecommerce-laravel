@@ -10,12 +10,23 @@ use Cart;
 class DetailsComponent extends Component
 {
     public $slug;
+    public $qty;
     protected $listeners = ['refreshComponent' => '$refresh'];
     public function mount($slug){
         $this->slug = $slug;
+        $this->qty = 1;
+    }
+    public function increaseQuantity(){
+       $this->qty++;
+
+    }
+    public function decreaseQuantity(){
+
+        $this->qty--;
+
     }
     public function store($product_id, $product_name, $product_price){
-        Cart::add($product_id, $product_name,1,$product_price)->associate('App\Models\Product');
+        Cart::add($product_id, $product_name,$this->qty,$product_price)->associate('App\Models\Product');
         session()->flash('success_message', 'Item added to cart');
         return redirect()->route('product.cart');
     }

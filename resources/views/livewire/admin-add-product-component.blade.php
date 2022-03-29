@@ -57,9 +57,7 @@
                                 <label for="" class="col-md-4 control-lable">Sale Price</label>
                                 <div class="col-md-4">
                                     <input type="text" placeholder="Sale Price" class="form-control input-md" wire:model="sale_price">
-                                    @error('sale_price')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
+
                                 </div>
                             </div>
                             <div class="form-group">
